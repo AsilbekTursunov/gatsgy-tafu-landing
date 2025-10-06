@@ -1,0 +1,13 @@
+@import 'tailwindcss';
+html,
+body {
+	padding: 0px;
+	margin: 0px;
+}
+.custom_container {
+	@apply max-w-7xl mx-auto px-6 2xl:px-0;
+}
+
+.text-color {
+	@apply text-[#3569B2];
+}
