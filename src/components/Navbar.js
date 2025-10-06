@@ -4,7 +4,7 @@ import { ChevronDown, ChevronUp, Menu } from 'lucide-react'
 import { Link, } from 'gatsby'
 import SideBar from './SideBar'
 
-const Navbar = ({ data }) => {
+const Navbar = ({ data, lang }) => {
   const [open, setopen] = useState(false)
   const [openSidebar, setopenSidebar] = useState(false)
 
@@ -29,7 +29,7 @@ const Navbar = ({ data }) => {
           <button type="button" className="bg-blue-900/90 hidden sm:block  cursor-pointer px-5 py-2 rounded-sm text-white">{data.profile}</button>
           <div className='relative '>
             <button on onClick={handleOpen} type="button" className=' language group relative flex items-center cursor-pointer  p-2 rounded-sm text-blue-900/90 border gap-1 border-gray-200 '>
-              {window.location.pathname.includes('uz') ? 'Uzb' : window.location.pathname.includes('ru') ? 'Рус' : "Eng"}
+              {lang === 'uz' ? 'Uzb' : lang === 'ru' ? 'Рус' : "Eng"}
               <span className='language'><ChevronDown size={20} className='language' /></span>
             </button>
             <div className={`left-0 w-full     top-full absolute ${open ? 'block' : 'hidden'}`}><ul className='p-2 overflow-hidden bg-white border border-gray-200 rounded-sm mt-2 space-y-2'>

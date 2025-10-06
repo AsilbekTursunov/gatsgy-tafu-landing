@@ -11,7 +11,7 @@ import Footer from "../components/Footer"
 export default function HomeRU({ data }) {
   return (
     <div style={{ fontFamily: "sans-serif", textAlign: "center" }}>
-      <Navbar data={data.page.blocks.navbar} />
+      <Navbar data={data.page.blocks.navbar} lang={"ru"}/>
       <Hero data={data.page.blocks.banner} />
       <Development data={data.page.blocks.development} unicef={data.page.blocks.unicef} />
       <Goals data={data.page.blocks.goals} />
